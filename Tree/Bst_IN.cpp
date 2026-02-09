@@ -3,15 +3,18 @@ using namespace std;
 
 struct Tree {
     // Enter data as int , create Left pointer, create right pointer
-
+    int data;
+    Tree* left;
+    Tree* right;
     // Create Constructor
+    Tree(int val) : data(val), left(nullptr), right(nullptr) {}
    
 };
 
 // Function to create a new node
 Tree* createTree(int data) {
     // Return Tree with data as argument inside Heap memory
-
+    return new Tree(data);
 }
 
 // Function To Create Searching Algorithm
@@ -19,10 +22,12 @@ void search(Tree *root, int val) {
     // If root is equal to nullpointer
     //Print Value Not Found or Tree is Empty
     // Return Out
-   
+   if(root==nullptr){
     // Print Value Found
-    
-    
+       return;
+   }
+    else if(val<root->data){
+        
 
     
     // Else if Val < root->data 
